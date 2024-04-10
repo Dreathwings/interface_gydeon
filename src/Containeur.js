@@ -1,32 +1,36 @@
 import React from 'react';
+import { Container_dict } from './App';
+import ReactDOM from 'react-dom/client';
 
-class Free_container extends React.Component{
+export default class Free_container extends React.Component{
     constructor(props){
-      super(props)
-      this.id = this.props.id;
+      super()
+      this.id = props;
   
       console.log("Add new Container id:",this.id)
+      return this.render()
     }
-    render() {
-      console.log("Rendering containeur ",this.id)
-      return <div id="c_container" class={this.id}>
+    render(){
+      console.log("Rendering containeur... ",this.id)
+      return(
+        <div id="c_container" class={this.id}>
           <div id="draggable_container" class={this.id}>
-            <div id="c_containerheader" class={this.id}>
-              <i id="draggable_container_name" class={this.id}>Contrainer test</i>
-              <button id="draggable_container_hide" class={this.id}>
-                <img src="ressource/minus-svgrepo-com.svg" alt="" />
-              </button>
-              <button id="draggable_container_close" class={this.id}>
-                <img src="ressource/close-svgrepo-com.svg" alt="" />
-              </button>
-            </div>
-            <p>Move</p>
-            <p>this</p>
-            <p>DIV</p>
+              <div id="c_containerheader" class={this.id}>
+                <i id="draggable_container_name" class={this.id}>Contrainer test</i>
+                <button id="draggable_container_hide" class={this.id}>
+                  <img src="ressource/minus-svgrepo-com.svg" alt="" />
+                </button>
+                <button id="draggable_container_close" class={this.id}>
+                  <img src="ressource/close-svgrepo-com.svg" alt="" />
+                </button>
+              </div>
+              <p>Move</p>
+              <p>this</p>
+              <p>DIV</p>
           </div>
           <div id='resizer-bottom-right' class={this.id}></div>
         </div>
-    
+      );
     };
 
     dragElement(drag_class) {
@@ -116,4 +120,17 @@ class Free_container extends React.Component{
      
     }
   };
-  export default {Free_container};
+export function AddContainer() {
+  for (var id in Container_dict) {
+    console.log(id, "|");
+    var n_id = id + 1;
+  };
+  var contenaire = document.getElementById("Main");
+  
+  var n_contenaire = <Free_container n_id/>;
+
+  //ReactDOM.render(n_contenaire,contenaire);
+  var boo = ReactDOM.createRoot(contenaire)
+  boo.render(n_contenaire)
+  Container_dict[n_id] = n_contenaire;
+}

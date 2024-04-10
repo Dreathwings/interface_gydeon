@@ -2,21 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import './style.css'
 import React from 'react';
-import Free_container from "./Containeur.js"
-import ReactDOM from 'react-dom/client';
-let Container_dict = {0:0}
+import { AddContainer } from './Containeur.js';
 
-function AddContainer(){
-  for(var id in Container_dict){
-    console.log(id, "|")
-    var n_id = id+1
-    //Container_dict[n_id] = n_contain
-    ReactDOM.render(<Free_container id='chibre'/> )
-  }
-}
+export let Container_dict = {0:0}
+
+;
 function App() {
   return (
-    <div className="App">
+  <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -31,7 +24,10 @@ function App() {
           Add new container
         </button>
       </header>
-    </div>
+      <div id="Main">
+
+      </div>
+  </div>
     
   );
 }
