@@ -1,0 +1,94 @@
+body{
+    background-color: rgb(59, 62, 82);
+}
+#c_container{
+    position: absolute;
+    width:fit-content;
+    height:fit-content;
+    border: 2px solid #000000;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+#draggable_container{
+
+    position: relative;
+    z-index: 10;
+    background-color: rgb(62, 64, 75);
+    font: #ffffff;
+    text-align: center;
+    border: 2px solid #000000;
+    border-radius: 0%;
+    color: #ffffff;
+    overflow: hidden;
+    min-width: fit-content;
+    border-bottom-right-radius: 10%;
+}
+#resizer-bottom-right {
+    right: -10px;
+    bottom: -10px;
+    cursor: nwse-resize;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; /*magic to turn square into circle*/
+    background: white;
+    border: 3px solid #4286f4;
+    position: absolute;
+  }
+#c_containerheader {
+    position: relative;
+    cursor: move;
+    height: 40px;
+    z-index: 11;
+    background-color: darkgray;
+    border-bottom: 2px solid #000000;
+}
+#c_containerheader button img{
+    position: absolute;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    height: 35px;
+    width: 35px;
+    left: 0;
+    top: 0;
+}
+
+.draggable_container_name {
+    position: absolute;
+    width: fit-content;
+    text-align: left;
+    height: 80%;
+    left: 10px;
+    top: 5%;
+    font-size: 1em;
+    font: #000;
+    z-index: 12;
+    border: 2px solid #000000;
+}
+.draggable_container_hide {
+    position:absolute;
+    border-radius: 50%;
+    top: 5%;
+    right: 50px;
+    height: 35px;
+    width: 35px;
+    z-index: 12;
+    background: transparent;
+    border: 0px solid #000000;
+}
+.draggable_container_close {
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    right: 10px;
+    height: 35px;
+    width: 35px;
+    z-index: 12;
+    background: transparent;
+    border: 0px solid #000000;
+}
+.TesT{
+    width: 500px;
+}
