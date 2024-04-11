@@ -13,16 +13,20 @@ function AddContainer() {
     console.log(id, "|");
     var n_id = id + 1;
   };
+  var contenaire = document.getElementById("Main");
   if (first_init == true){
-    var contenaire = document.getElementById("Main");
     boo = ReactDOM.createRoot(contenaire);
     first_init = false;
   }
   var n_contenaire = <Free_container 
                       id={n_id}
                       />;
+  var domNode = document.createElement('div');
+  domNode.id = n_id
+  contenaire.appendChild(domNode);
+  const root = ReactDOM.createRoot(domNode); 
   
-  boo.render(n_contenaire)
+  root.render(n_contenaire)
   Container_dict[n_id] = n_contenaire;
 };
 
