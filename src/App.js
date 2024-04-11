@@ -33,6 +33,8 @@ function AddContainer() {
 function App() {
   return (
   <div className="App">
+    <div id="Main">
+    </div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -47,9 +49,6 @@ function App() {
           Add new container
         </button>
       </header>
-      <div id="Main">
-
-      </div>
   </div>
     
   );

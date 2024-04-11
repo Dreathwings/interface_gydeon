@@ -24,22 +24,22 @@ export default class Free_container extends React.Component{
     render(){
       console.log("Rendering containeur... ",this.id)
       return(
-        <div id="c_container" className={this.id}>
-          <div id="draggable_container" className={this.id}>
-            <div id="c_containerheader" onMouseDown={this.dragMouseDown} className={this.id}>
-              <i id="draggable_container_name" className={this.id}>Contrainer test</i>
-              <button id="draggable_container_hide" className={this.id}>
-                <img src="./ressource/minus-svgrepo-com.svg" alt="" />
+        <div id="c_container" class={this.id} className={this.id}>
+          <div id="draggable_container" class={this.id} className={this.id}>
+            <div id="c_containerheader" onMouseDown={this.dragMouseDown} class={this.id} className={this.id}>
+              <i id="draggable_container_name" class={this.id} className={this.id}>Contrainer test</i>
+              <button id="draggable_container_hide" class={this.id} className={this.id}>
+                <img src="minus-svgrepo-com.svg" alt="" />
               </button>
-              <button id="draggable_container_close" className={this.id}>
-                <img src="/ressource/close-svgrepo-com.svg" alt="" />
+              <button id="draggable_container_close" class={this.id} className={this.id}>
+                <img src="close-svgrepo-com.svg" alt="" />
               </button>
             </div>
             <p>Move</p>
             <p>this</p>
             <p>DIV</p>
           </div>
-          <div id='resizer-bottom-right' onMouseDown={this.initResize} className={this.id}></div>
+          <div id='resizer-bottom-right' onMouseDown={this.initResize} class={this.id} className={this.id}></div>
         </div>
       );
     };

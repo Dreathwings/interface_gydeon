@@ -45,33 +45,32 @@ body{
     z-index: 11;
     background-color: darkgray;
     border-bottom: 2px solid #000000;
+    min-width: 135px;
 }
 #c_containerheader button img{
-    position: absolute;
+    position: relative;
     background-repeat: no-repeat;
     object-fit: contain;
     height: 35px;
     width: 35px;
-    left: 0;
-    top: 0;
 }
 
-.draggable_container_name {
+#draggable_container_name {
     position: absolute;
-    width: fit-content;
+    width: 50px;
     text-align: left;
     height: 80%;
     left: 10px;
-    top: 5%;
-    font-size: 1em;
+    top: 1.5px;
+    font-size: 0.75em;
     font: #000;
-    z-index: 12;
+    z-index: 10;
     border: 0px solid #000000;
 }
-.draggable_container_hide {
+#draggable_container_hide {
     position:absolute;
     border-radius: 50%;
-    top: 5%;
+    top: 1.5px;
     right: 50px;
     height: 35px;
     width: 35px;
@@ -79,10 +78,10 @@ body{
     background: transparent;
     border: 0px solid #000000;
 }
-.draggable_container_close {
+#draggable_container_close {
     border-radius: 50%;
     position: absolute;
-    top: 5%;
+    top: 1.5px;
     right: 10px;
     height: 35px;
     width: 35px;
