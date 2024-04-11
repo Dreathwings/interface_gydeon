@@ -5,7 +5,7 @@ body{
     position: absolute;
     width:fit-content;
     height:fit-content;
-    border: 2px solid #000000;
+    border: 0px solid #000000;
     user-select: none;
     -moz-user-select: none;
     -khtml-user-select: none;
@@ -24,7 +24,7 @@ body{
     color: #ffffff;
     overflow: hidden;
     min-width: fit-content;
-    border-bottom-right-radius: 10%;
+    border-bottom-right-radius: 20px;
 }
 #resizer-bottom-right {
     right: -10px;
@@ -65,7 +65,7 @@ body{
     font-size: 1em;
     font: #000;
     z-index: 12;
-    border: 2px solid #000000;
+    border: 0px solid #000000;
 }
 .draggable_container_hide {
     position:absolute;
