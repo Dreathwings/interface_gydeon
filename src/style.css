@@ -15,7 +15,6 @@ body{
 #draggable_container{
 
     position: relative;
-    z-index: 10;
     background-color: rgb(62, 64, 75);
     font: #ffffff;
     text-align: center;
@@ -31,21 +30,53 @@ body{
     right: -10px;
     bottom: -10px;
     cursor: nwse-resize;
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /*magic to turn square into circle*/
+    background: rgba(255, 255, 255, 0);
+    border: 0px solid #4286f4;
+    position: absolute;
+  }
+  #round_1 {
+    right: 17.5px;
+    bottom: 5px;
+    cursor: nwse-resize;
+    width: 1px;
+    height: 1px;
     border-radius: 50%; /*magic to turn square into circle*/
     background: white;
-    border: 3px solid #4286f4;
+    border: 1.25px solid #ffffff80;
+    position: absolute;
+  }
+  #round_2 {
+    right: 8px;
+    bottom: 8px;
+    cursor: nwse-resize;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%; /*magic to turn square into circle*/
+    background: white;
+    border: 1.25px solid #ffffff80;
+    position: absolute;
+  }
+  #round_3 {
+    right: 5px;
+    bottom: 17.5px;
+    cursor: nwse-resize;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%; /*magic to turn square into circle*/
+    background: white;
+    border: 1.25px solid #ffffff80;
     position: absolute;
   }
 #c_containerheader {
     position: relative;
     cursor: move;
     height: 40px;
-    z-index: 11;
     background-color: darkgray;
     border-bottom: 2px solid #000000;
-    min-width: 135px;
+    min-width: 150px;
 }
 #c_containerheader button img{
     position: relative;
@@ -64,7 +95,6 @@ body{
     top: 1.5px;
     font-size: 0.75em;
     font: #000;
-    z-index: 10;
     border: 0px solid #000000;
 }
 #draggable_container_hide {
@@ -74,7 +104,6 @@ body{
     right: 50px;
     height: 35px;
     width: 35px;
-    z-index: 12;
     background: transparent;
     border: 0px solid #000000;
 }
@@ -85,7 +114,6 @@ body{
     right: 10px;
     height: 35px;
     width: 35px;
-    z-index: 12;
     background: transparent;
     border: 0px solid #000000;
 }

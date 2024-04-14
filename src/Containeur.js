@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 export default class Free_container extends React.Component{
     constructor(props){
@@ -15,6 +16,10 @@ export default class Free_container extends React.Component{
       this.Resize = this.Resize.bind(this);
       this.stopResize = this.stopResize.bind(this);
 
+      this.setFocus = this.setFocus.bind(this);
+
+      this.remove_container = this.remove_container.bind(this);
+
       this.pos1 = 0;
       this.pos2 = 0;
       this.pos3 = 0;
@@ -24,14 +29,14 @@ export default class Free_container extends React.Component{
     render(){
       console.log("Rendering containeur... ",this.id)
       return(
-        <div id="c_container" class={this.id} className={this.id}>
+        <div id="c_container" onMouseDown={this.setFocus} onclass={this.id} className={this.id}>
           <div id="draggable_container" class={this.id} className={this.id}>
             <div id="c_containerheader" onMouseDown={this.dragMouseDown} class={this.id} className={this.id}>
-              <i id="draggable_container_name" class={this.id} className={this.id}>Contrainer test</i>
+              <i id="draggable_container_name" class={this.id} className={this.id}>Contrainer {this.id}</i>
               <button id="draggable_container_hide" class={this.id} className={this.id}>
                 <img src="minus-svgrepo-com.svg" alt="" />
               </button>
-              <button id="draggable_container_close" class={this.id} className={this.id}>
+              <button id="draggable_container_close" onClick={this.remove_container} class={this.id} className={this.id}>
                 <img src="close-svgrepo-com.svg" alt="" />
               </button>
             </div>
@@ -39,7 +44,11 @@ export default class Free_container extends React.Component{
             <p>this</p>
             <p>DIV</p>
           </div>
-          <div id='resizer-bottom-right' onMouseDown={this.initResize} class={this.id} className={this.id}></div>
+          <div id='resizer-bottom-right' onMouseDown={this.initResize} class={this.id} className={this.id}>
+            <div id='round_1' class={this.id} className={this.id}></div>
+            <div id='round_2' class={this.id} className={this.id}></div>
+            <div id='round_3' class={this.id} className={this.id}></div>
+          </div>
         </div>
       );
     };
@@ -104,12 +113,12 @@ export default class Free_container extends React.Component{
         if (h < 40){
             h=40;
         }
-        if (w < 135){
-            w=135;
+        if (w < 150){
+            w=150;
         }
-        console.log('taile ',w,h,' FOR ',this.R_element)
-        console.log('Mouse pos',e.clientX,e.clientY)
-        console.log('Windows origine',this.O_element.offsetTop,this.O_element.offsetLeft)
+        //console.log('taile ',w,h,' FOR ',this.R_element)
+        //console.log('Mouse pos',e.clientX,e.clientY)
+        //console.log('Windows origine',this.O_element.offsetTop,this.O_element.offsetLeft)
         this.R_element.style.width = w +'px'
         this.R_element.style.height = h + 'px'
      }
@@ -117,8 +126,28 @@ export default class Free_container extends React.Component{
       document.onmouseup = null;
       document.onmousemove = null;
      }
-     
-  }
 
-  
-    
+    setFocus(){
+      var el = document.getElementById("Main")
+      //console.log(el.children)
+      for (let i = 0; i < el.children.length; i++) {
+        var ele = el.children[i]
+        //console.log(ele.children[0])
+        if(ele.id == this.id){
+          ele.children[0].style.zIndex = 69
+          //console.log("Set ",ele.id," to z_index -1")
+        }
+        else{
+          ele.children[0].style.zIndex = 10
+          //console.log("Set ",ele.id," to z_index 10")
+        }
+      
+     }
+    }
+
+    remove_container(){
+      var del = document.getElementById(this.id);
+      console.log(del);
+      ReactDOM.unmountComponentAtNode(del);
+    }
+  }
