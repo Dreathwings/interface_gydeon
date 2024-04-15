@@ -19,7 +19,8 @@ export default class Free_container extends React.Component{
       this.setFocus = this.setFocus.bind(this);
 
       this.remove_container = this.remove_container.bind(this);
-
+      this.main = document.getElementById("Main")
+      console.log(this.main)
       this.pos1 = 0;
       this.pos2 = 0;
       this.pos3 = 0;
@@ -76,8 +77,25 @@ export default class Free_container extends React.Component{
       this.pos3 = this.e.clientX;
       this.pos4 = this.e.clientY;
       // set the element's new position:
-      this.elmnt.style.top = (this.elmnt.offsetTop - this.pos2) + "px";
-      this.elmnt.style.left = (this.elmnt.offsetLeft - this.pos1) + "px";
+      //console.log(this.main)
+      var t= (this.elmnt.offsetTop - this.pos2)
+      if (t<0){
+        t=0
+      }
+      else if(t>(this.main.offsetHeight - this.elmnt.offsetHeight)){
+        //console.log(this.main.offsetWidth)
+        t = this.main.offsetHeight - this.elmnt.offsetHeight-2
+      }
+      var l = (this.elmnt.offsetLeft - this.pos1)
+      if (l<0){
+        l=0
+      }
+      else if(l>(this.main.offsetWidth - this.elmnt.offsetWidth)){
+        //console.log(this.main.offsetWidth)
+        l = this.main.offsetWidth - this.elmnt.offsetWidth
+      }
+      this.elmnt.style.top = t + "px";
+      this.elmnt.style.left = l + "px";
     }
   
     closeDragElement() {
@@ -132,22 +150,34 @@ export default class Free_container extends React.Component{
       //console.log(el.children)
       for (let i = 0; i < el.children.length; i++) {
         var ele = el.children[i]
-        //console.log(ele.children[0])
+        //console.log(ele)
         if(ele.id == this.id){
           ele.children[0].style.zIndex = 69
           //console.log("Set ",ele.id," to z_index -1")
         }
-        else{
-          ele.children[0].style.zIndex = 10
+        else if(ele.id == "in_contenaire_blc"){
+          ele.style.zIndex = 10
           //console.log("Set ",ele.id," to z_index 10")
+        }
+        else {
+          ele.children[0].style.zIndex = 10
         }
       
      }
     }
 
     remove_container(){
-      var del = document.getElementById(this.id);
-      console.log(del);
-      ReactDOM.unmountComponentAtNode(del);
+      var del = document.getElementById("Main");
+      var bob = del.children
+      console.log(bob)
+      console.log('boucle')
+      for(var i=0;i<bob.length;i++){
+        console.log(bob[i])
+        if(bob[i].id == this.id){
+          del.removeChild(bob[i])
+        }
+        
+      }
+      
     }
   }

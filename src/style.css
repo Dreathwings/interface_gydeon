@@ -88,14 +88,16 @@ body{
 
 #draggable_container_name {
     position: absolute;
-    width: 50px;
+    width: fit-content;
     text-align: left;
-    height: 80%;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     left: 10px;
-    top: 1.5px;
-    font-size: 0.75em;
+    top: 0px;
+    font-size: 1.2rem;
     font: #000;
-    border: 0px solid #000000;
+    border: 1px solid #000000;
 }
 #draggable_container_hide {
     position:absolute;

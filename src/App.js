@@ -23,6 +23,7 @@ function AddContainer() {
                       />;
   var domNode = document.createElement('div');
   domNode.id = n_id
+  console.log(contenaire)
   contenaire.appendChild(domNode);
   const root = ReactDOM.createRoot(domNode); 
   
@@ -34,21 +35,14 @@ function App() {
   return (
   <div className="App">
     <div id="Main">
+      <button id="in_contenaire_blc"
+      onClick={AddContainer}
+      className="App-link"
+      target="_blank"
+      rel="noopener noreferrer"
+      > Add new container </button>
     </div>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <button
-          onClick={AddContainer}
-          className="App-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Add new container
-        </button>
-      </header>
+    
   </div>
     
   );
