@@ -29,6 +29,7 @@ export default class Free_container extends React.Component{
     }
     render(){
       console.log("Rendering containeur... ",this.id)
+      //add your content to the div id c_content 
       return(
         <div id="c_container" onMouseDown={this.setFocus} onclass={this.id} className={this.id}>
           <div id="draggable_container" class={this.id} className={this.id}>
@@ -41,9 +42,11 @@ export default class Free_container extends React.Component{
                 <img src="close-svgrepo-com.svg" alt="" />
               </button>
             </div>
+            <div id="c_content"> 
             <p>Move</p>
             <p>this</p>
             <p>DIV</p>
+            </div>
           </div>
           <div id='resizer-bottom-right' onMouseDown={this.initResize} class={this.id} className={this.id}>
             <div id='round_1' class={this.id} className={this.id}></div>
@@ -84,8 +87,9 @@ export default class Free_container extends React.Component{
       }
       else if(t>(this.main.offsetHeight - this.elmnt.offsetHeight)){
         //console.log(this.main.offsetWidth)
-        t = this.main.offsetHeight - this.elmnt.offsetHeight-2
+        t = this.main.offsetHeight - this.elmnt.offsetHeight
       }
+
       var l = (this.elmnt.offsetLeft - this.pos1)
       if (l<0){
         l=0
@@ -94,6 +98,7 @@ export default class Free_container extends React.Component{
         //console.log(this.main.offsetWidth)
         l = this.main.offsetWidth - this.elmnt.offsetWidth
       }
+
       this.elmnt.style.top = t + "px";
       this.elmnt.style.left = l + "px";
     }
@@ -126,10 +131,10 @@ export default class Free_container extends React.Component{
         //window.addEventListener('mouseup', this.stopResize, false);
      }
      Resize(e) {
-        var w=( (e.clientX-this.O_element.offsetLeft)-10) ;
-        var h=(  (e.clientY-this.O_element.offsetTop)-10) ;
-        if (h < 40){
-            h=40;
+        var w = ( (e.clientX - this.O_element.offsetLeft)) ;
+        var h = ( (e.clientY - this.O_element.offsetTop - 70)) ;
+        if (h < 35){
+            h=35;
         }
         if (w < 150){
             w=150;

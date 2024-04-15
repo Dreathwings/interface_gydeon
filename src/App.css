@@ -1,3 +1,17 @@
+:root {
+  --c_: #f6f6f9;
+  --c_font: #ecedf2;
+  --c_detail: #d5d6e2;
+  --c_: #b1b5c8;
+  --c_: #878da9;
+  --c_: #686f8f;
+  --c_: #535876;
+  --c_active: #444760;
+  --c_: #3b3e52;
+  --c_: #343646;
+  --c_background: '#23242e';
+}
+
 .App {
   text-align: center;
   /*background-color: #282c34;*/
@@ -5,22 +19,11 @@
 
 }
 
-.App-logo {
-  height: 10vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 #Main {
   position: absolute;
   left: 0;
   bottom: 0;
-  min-width: 92.5%;
+  min-width: 100%;
   background-color: #282c34;
   min-height: 92.5%;
   display: flex;
@@ -33,7 +36,10 @@
 }
 
 .App-link {
-  color: #61dafb;
+  background-color: var(--c_background);
+  border: 1px solid var(--c_font);
+  color: var(--c_detail);
+  border-radius: 10px;
 }
 
 @keyframes App-logo-spin {
