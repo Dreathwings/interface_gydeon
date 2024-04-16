@@ -4,6 +4,7 @@ import './style.css'
 import React from 'react';
 import Free_container from './Containeur';
 import ReactDOM from 'react-dom/client';
+import Head_Bar from './Head_Bar';
 
 export let Container_dict = {0:0};
 let first_init = true
@@ -15,7 +16,7 @@ function AddContainer() {
   };
   var contenaire = document.getElementById("Main");
   if (first_init == true){
-    boo = ReactDOM.createRoot(contenaire);
+    ReactDOM.createRoot(contenaire);
     first_init = false;
   }
   var n_contenaire = <Free_container 
@@ -34,6 +35,7 @@ function AddContainer() {
 function App() {
   return (
   <div className="App">
+    <Head_Bar></Head_Bar>
     <div id="Main">
       <button id="in_contenaire_blc"
       onClick={AddContainer}

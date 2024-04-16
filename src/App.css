@@ -1,15 +1,9 @@
 :root {
-  --c_: #f6f6f9;
-  --c_font: #ecedf2;
-  --c_detail: #d5d6e2;
-  --c_: #b1b5c8;
-  --c_: #878da9;
-  --c_: #686f8f;
-  --c_: #535876;
-  --c_active: #444760;
-  --c_: #3b3e52;
-  --c_: #343646;
-  --c_background: '#23242e';
+  --c_font: #fff;
+  --c_active: #AAAAAA;
+  --c_: #7F7B82;
+  --c_headbar: #231F20;
+  --c_background: #000000;
 }
 
 .App {
@@ -24,14 +18,14 @@
   left: 0;
   bottom: 0;
   min-width: 100%;
-  background-color: #282c34;
-  min-height: 92.5%;
+  background-color: var(--c_background);
+  height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 1vmin);
-  color: white;
+  font-size: calc(10px + 1vw);
+  color: var(--c_font);
   overflow:hidden
 }
 

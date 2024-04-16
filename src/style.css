@@ -1,21 +1,55 @@
 :root {
-    --c_: #f6f6f9;
-    --c_font: #ecedf2;
-    --c_detail: #d5d6e2;
-    --c_: #b1b5c8;
-    --c_: #878da9;
-    --c_: #686f8f;
-    --c_: #535876;
-    --c_active: #444760;
-    --c_: #3b3e52;
-    --c_: #343646;
-    --c_background: '#23242e';
+    --c_font: #fff;
+    --c_active: #AAAAAA;
+    --c_: #7F7B82;
+    --c_headbar: #231F20;
+    --c_background: #000000;
 }
 
 
 body{
     background-color: var(--c_background);
 }
+
+#headbar_container{
+    background-color: var(--c_background);
+    /*background-color: transparent;*/
+    top:0;
+    height:6vh;
+    width: 100vw;
+    border-bottom: 2px solid var(--c_active);
+    z-index: 1;
+    position: absolute;
+}
+#head_circle_c{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100vw;
+    height: 6vh;
+    background-color: rgb(0, 0, 0);
+    left: 45.75vw;
+    z-index: 1;
+}
+#head_circle{
+    position: absolute;
+    z-index: -1;
+    width: 10vh;
+    height: 10vh;
+    border: 3px solid var(--c_active);
+    border-radius: 50%;
+    background-color: #000;
+}
+
+#Gydeon_icon{
+    position: absolute;
+    top: 5;
+    width: 100%;
+    height: 10vh;
+    left: 0;
+    z-index: 99;
+}
+
 #c_container{
     position: absolute;
     width:fit-content;
@@ -33,7 +67,7 @@ body{
     background-color: var(--c_background);
     font: var(--c_font);
     text-align: center;
-    border: 1.5px solid #000000;
+    border: 1.5px solid var(--c_active);
     border-radius: 0%;
     color: var(--c_font);
     overflow: hidden;
@@ -59,7 +93,7 @@ body{
     width: 4px;
     height: 4px;
     border-radius: 50%; /*magic to turn square into circle*/
-    background: var(--c_detail);
+    background: var(--c_active);
     border: 0px solid #ffffff80;
     position: absolute;
   }
@@ -70,7 +104,7 @@ body{
     width: 4px;
     height: 4px;
     border-radius: 50%; /*magic to turn square into circle*/
-    background: var(--c_detail);
+    background: var(--c_active);
     border: 0px solid #000;
     position: absolute;
   }
@@ -81,24 +115,24 @@ body{
     width: 4px;
     height:4px;
     border-radius: 50%; /*magic to turn square into circle*/
-    background: var(--c_detail);
+    background: var(--c_active);
     border: 0px solid #000;
     position: absolute;
   }
 #c_containerheader {
     position: relative;
     cursor: move;
-    height: 35px;
-    background-color: var(--c_active);
-    border-bottom: 1.5px solid #000000;
+    height: 30px;
+    background-color: var(--c_headbar);
+    border-bottom: 1.5px solid var(--c_active);
     min-width: 150px;
 }
 #c_containerheader button img{
     position: relative;
     background-repeat: no-repeat;
-    object-fit: contain;
-    height: 30px;
-    width: 30px;
+    object-fit: cover;
+    height: 20px;
+    width: 20px;
 }
 
 #draggable_container_name {
@@ -108,26 +142,26 @@ body{
     justify-content: center;
     align-items: center;
     height: 90%;
-    font-size:1rem;
+    font-size:0.85rem;
     border: 0px solid #000000;
 }
 #draggable_container_hide {
     position:absolute;
     border-radius: 50%;
-    top: 1.5px;
-    right: 50px;
-    height: 35px;
-    width: 35px;
+    top: 4px;
+    right: 35px;
+    height: 20px;
+    width: 20px;
     background: transparent;
     border: 0px solid #000000;
 }
 #draggable_container_close {
     border-radius: 50%;
     position: absolute;
-    top: 1.5px;
+    top: 4px;
     right: 10px;
-    height: 35px;
-    width: 35px;
+    height: 20px;
+    width: 20px;
     background: transparent;
     border: 0px solid #000000;
 }

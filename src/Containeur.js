@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 
 export default class Free_container extends React.Component{
     constructor(props){
@@ -132,9 +131,9 @@ export default class Free_container extends React.Component{
      }
      Resize(e) {
         var w = ( (e.clientX - this.O_element.offsetLeft)) ;
-        var h = ( (e.clientY - this.O_element.offsetTop - 70)) ;
-        if (h < 35){
-            h=35;
+        var h = ( (e.clientY - this.O_element.offsetTop - 125)) ;
+        if (h < 30){
+            h=30;
         }
         if (w < 150){
             w=150;
