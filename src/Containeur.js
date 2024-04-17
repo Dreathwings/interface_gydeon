@@ -131,7 +131,7 @@ export default class Free_container extends React.Component{
      }
      Resize(e) {
         var w = ( (e.clientX - this.O_element.offsetLeft)) ;
-        var h = ( (e.clientY - this.O_element.offsetTop - 125)) ;
+        var h = ( (e.clientY - this.O_element.offsetTop-75)) ;
         if (h < 30){
             h=30;
         }
