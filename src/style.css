@@ -35,8 +35,8 @@ body{
 #head_circle{
     position: absolute;
     z-index: -1;
-    width: 13.5vh;
-    height: 12.5vh;
+    width: 7.25vw;
+    height: 6.25vw;
     border: 3px solid var(--c_active);
     border-radius: 50%;
     background-color: #000;
@@ -166,191 +166,27 @@ body{
     background: transparent;
     border: 0px solid #000000;
 }
-
-*{
-    padding:0px;
-    margin:0px;
-  }
-  #circlemain{
-    position: absolute;
-    display:table;
-    height:10vh;
-    width:100vw;
-    top: 0.5vh;
-  }
-  #status{
-    box-shadow: 0 0 75px #2187e7;
-    border-radius:15px 15px 0px 0px;
-    max-width:300px;
-    margin:auto;
-    color:#99a;
-    padding:10px;
-    position:absolute;
-    bottom:0px;
-    left:0px;
-    right:0px;
-    font-size:10px;
-    text-align:center;
-    transition: all 0.5s ease;
-  }
-  #status:hover{
-    padding:15px 10px;
-    font-size:12px;
-  }
-  #myCircle
-  {
-    display:table-cell;
-    vertical-align:middle;
-  }
-  #mainCircle{
-    position:relative;
-    max-width: 10vw;
-    max-height:10vw;
-    margin: auto;
-  }
-  #mainContent{
-    position:absolute;
-    top:0px;
-    height:50%;
-    width:50%;
-    cursor:pointer;
-    border-radius:50%;
-  }
-  #mainText{
-    visibility:hidden;
-    text-align:center;
-    vertical-align:middle;
-    padding-top: 120px;
-    margin-top: 50%;
-    transform: translateY(-50%);
-    color:#ccc;
-    animation:fade 3s infinite linear;
-    font-size:50px;
-}
-  .circle {
-      background-color: rgba(0,0,0,0);
-      border: 5px solid rgba(0,183,229,0.9);
-      opacity: .9;
-      border-right: 5px solid rgba(0,0,0,0);
-      border-left: 5px solid rgba(0,0,0,0);
-      border-radius: 300px;
-      box-shadow: 0 0 75px #2187e7;
-      width: 5vw;
-      height: 5vw;
-      margin: 0 auto;
-      animation: spinPulse 1s infinite ease-in-out;
-      -webkit-animation: spinPulse 2s infinite ease-in-out;
-  }
-  
-  .circle1 {
-      background-color: rgba(0,0,0,0);
-      border: 5px solid rgba(0,183,229,0.9);
-      opacity: .9;
-      border-left: 5px solid rgba(0,0,0,0);
-      border-right: 5px solid rgba(0,0,0,0);
-      border-radius: 250px;
-      box-shadow: 0 0 100px #2187e7;
-      width:3.5vw;
-      height: 3.5vw;;
-      margin: 0 auto;
-      position: absolute;
-      top: .8vw;
-      left:0.15vw;
-      right:0px;
-      animation: spinoffPulse 1s infinite linear;
-      -webkit-animation: spinoffPulse 4s infinite linear;
-  }
-  
-  @keyframes spinPulse {
-      0% {
-          -moz-transform: rotate(160deg);
-          opacity: 0;
-          box-shadow: 0 0 1px #2187e7;
-      }
-  
-      50% {
-          -moz-transform: rotate(145deg);
-          opacity: 1;
-      }
-  
-      100% {
-          -moz-transform: rotate(-320deg);
-          opacity: 0;
-      };
-  }
-  
-    @keyframes spinoffPulse {
-      0% {
-          -moz-transform: rotate(0deg);
-      }
-  
-      100% {
-          -moz-transform: rotate(360deg);
-      };
-  }
-  
-  @-webkit-keyframes spinPulse {
-      0% {
-        transform:scale(1.1);
-      }
-      70% {
-        transform:scale(0.98);
-      }
-  
-     /*90% {
-        transform:scale(1.05);
-      };*/
-    100%{
-      transform:scale(1.1);
-    }
-  }
-  
-  @-webkit-keyframes spinoffPulse {
-      0% {
-          -webkit-transform: rotate(0deg) scale(1);
-      }
-      10%{
-        -webkit-transform: rotate(90deg);
-      }
-      20%{
-        -webkit-transform: rotate(-90deg) scale(1.05);
-      }
-      40%{
-        -webkit-transform: rotate(180deg) scale(0.9);
-      }
-      70%{
-        -webkit-transform: rotate(-180deg) scale(1.05);
-      }
-      100% {
-          -webkit-transform: rotate(360deg) scale(1);
-      };
-  }
-  @keyframes fade{
-    0%{opacity:1;}
-    50%{opacity:0;}
-    100%{opacity:1;}
-  }
   .bars{
       position: fixed;
       z-index: 3;
       margin: 0 auto;
       left: -5px;
       right: 0;
-      top:9.5vh;
+      top:6vh;
       margin-top: -30px;
-      width: 60px;
+      width: 120px;
       height: 60px;
     list-style: none;
   }
   
   li{
-          background-color: #FFFFFF;
-          width: 0.5vw;
-          height: 1px;
-          float: right;
-          margin-right: 5px;
-      box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
-      }
+    background-color: #FFFFFF;
+    width: 0.5vw;
+    height: 1px;
+    float: right;
+    margin-right: 5px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+  }
   li:first-child{
               animation: loadbars 0.6s cubic-bezier(0.645,0.045,0.355,1) infinite 0s;
           }
